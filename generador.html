@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generador de contraseñas</title>
+	<link rel="shortcut icon" href="logo">
+	<meta charset="utf-8">
+	<style type="text/css"></style>
+	<script type="text/javascript">
+$all="abcdefghijklmnopqrstuvwxyz1234567890!$%&/()=?¿";
+function gene(){
+$cant=document.getElementById("C").value;
+$allChar="";
+for($x=0;$x<$cant;$x++){
+$ran=Math.floor(Math.random()*$all.length);
+$allChar=$allChar+$all[$ran];
+}
+document.getElementById("R").value=$allChar;
+		}
+		setTimeout(function(){
+			//location.reload();
+		},2000);
+	</script>
+</head>
+<body>
+ <h2>Generador de contraseñas aleatorias</h2>
+	<img width="100px" height="100px" align="right" src="https://guilleweb.cf/port/logo" alt="GuilleWeb logo">
+cant. de caracteres<br>
+<input id="C"><br>
+resultado:<br>
+<input id="R"><br>
+<input type="button" onclick="gene();" value="Generar">
+<a href="https://guilleweb.cf">GuilleWeb</a>
+</body>
+</html>

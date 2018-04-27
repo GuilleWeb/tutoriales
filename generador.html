@@ -6,14 +6,21 @@
 	<meta charset="utf-8">
 	<style type="text/css"></style>
 	<script type="text/javascript">
+//variable que contiene todos los caracteres
 $all="abcdefghijklmnopqrstuvwxyz1234567890!$%&/()=?¿";
 function gene(){
+//obtenemos el elemento que nos dara la cantidad de caracteres
 $cant=document.getElementById("C").value;
+//definimos la varibale que contendra todo el resultado (vacia)
 $allChar="";
+//blucle que nos llenara la variable con los nuevos caracteres
 for($x=0;$x<$cant;$x++){
+//variable que nos devuelve numeros aleatorios (la cantidad de caracteres de la variable $all)
 $ran=Math.floor(Math.random()*$all.length);
+//le asignamos el nuevo valor a la variable que contiene todo el resultado
 $allChar=$allChar+$all[$ran];
 }
+//escribimos el resultado en un input
 document.getElementById("R").value=$allChar;
 	</script>
 </head>
@@ -21,10 +28,14 @@ document.getElementById("R").value=$allChar;
  <h2>Generador de contraseñas aleatorias</h2>
 	<img width="100px" height="100px" align="right" src="https://guilleweb.cf/port/logo" alt="GuilleWeb logo">
 cant. de caracteres<br>
+<!-- definimos la cantidad de caracteres que tenga el resultado -->
 <input id="C"><br>
 resultado:<br>
+<!-- aqui se colocara el resultado-->
 <input id="R"><br>
+<!-- al presionar este se ejecutara la funcion -->
 <input type="button" onclick="gene();" value="Generar">
 <a href="https://guilleweb.cf">GuilleWeb</a>
+<a href="https://www.youtube.com/playlist?list=PLdG2IYnAeWAPRXsfN2FYGn5P-A4UGR1V3">Ver video</a>
 </body>
 </html>
